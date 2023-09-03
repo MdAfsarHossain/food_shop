@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block body %}
+<div style="width: 50%; margin: auto;">
+  <h2 style="text-align: center; margin-top: 15px;">Welcome To Add Task page!!</h2>
+
+  <form method="POST">
+      {% csrf_token %}
+      {{task|crispy}}
+
+      <button class="btn btn-info" type="submit" >Submit</button>
+  </form>
+</div>
+{% endblock %}
